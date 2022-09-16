@@ -7,7 +7,7 @@ const campoDolar = document.getElementById('dolar');
 const campoResultado = document.getElementById('monto');
 
 function cargarDatos(){
-    fetch("https://exchangemonitor.net/api/divisas?user=&token=&currency=").then((resp) => {
+    fetch("https://exchangemonitor.net/api/divisas?user=EDUARDO_150922&token=JHtygv65g5j8w0fy1H61&currency=USD&filter=VES").then((resp) => {
         if(resp.ok){
             return resp.json();
         }
@@ -23,10 +23,10 @@ function cargarDatos(){
 function calcular(){
     let price = parseFloat(campoPrecio.textContent);
     let mount = campoDolar.valueAsNumber;
-    let result  = price * mount;
-    console.log(result)
+    let result = price * mount;
+
     campoResultado.valueAsNumber = result;
-    
+    console.log(result);
 }
 
 window.onload = cargarDatos;
