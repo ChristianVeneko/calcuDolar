@@ -43,6 +43,14 @@ input{
   font-size: 30px;
 }
 
+a{
+  color: white;
+  padding: 10px;
+  border: solid lightgreen 6px;
+  background-color: gray;
+  margin-bottom: 30px;
+}
+
 .button-37 {
   background-color: #13aa52;
   border: 1px solid #13aa52;
@@ -75,3 +83,4 @@ input{
     padding: 10px 30px;
   }
 }
+
