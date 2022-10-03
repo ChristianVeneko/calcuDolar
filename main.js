@@ -6,19 +6,15 @@ const campoPrecio = document.getElementById('tasa');
 const campoDolar = document.getElementById('dolar');
 const campoResultado = document.getElementById('monto');
 
-function cargarDatos(){
-    fetch("https://exchangemonitor.net/api/divisas?user=EDUARDO_150922&token=JHtygv65g5j8w0fy1H61&currency=USD&filter=VES").then((resp) => {
-        if(resp.ok){
-            return resp.json();
-        }
-    }).then((json) => {
-        precio = json.data;
-        console.log(precio);
-        campoPrecio.innerHTML = precio[0].data.rate;
-        return campoPrecio;
+const url = "https://v6.exchangerate-api.com/v6/572e47397575f899191f4ce2/latest/USD"
 
-    })
-}
+fetch(url)
+.then(res => res.json())
+.then(data => {
+    precio = data
+    console.log(precio)
+    campoPrecio.innerHTML = precio.conversion_rates.VES
+})
 
 function calcular(){
     let price = parseFloat(campoPrecio.textContent);
@@ -28,5 +24,3 @@ function calcular(){
     campoResultado.valueAsNumber = result;
     console.log(result);
 }
-
-window.onload = cargarDatos;
