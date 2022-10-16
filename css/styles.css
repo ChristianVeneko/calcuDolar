@@ -96,7 +96,7 @@ a{
 .btn{
   background-image:url('https://play-lh.googleusercontent.com/aIgqpeeia-0KjRvic-vK4WCnJOenVu95IHSFG-37p5zoWYRyMa9SiOGgkf7vrmJ_Zf8');
   background-repeat:no-repeat;
-  height:60px;
+  height:70px;
   width:70px;
   background-color: rgb(33, 34, 46);
   border: 0px;
@@ -104,10 +104,12 @@ a{
   background-position:center;
 }
 
+
+
 .btn2{
   background-image:url('https://monitordolarvenezuela.com/img/BCV.png');
   background-repeat:no-repeat;
-  height:60px;
+  height:70px;
   width:70px;
   background-color: rgb(33, 34, 46);
   border: 0px;
