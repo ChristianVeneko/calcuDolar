@@ -4,11 +4,12 @@ body{
     margin: 0;
     height: 150vh;
     padding: 0 10% 5%;
+    
 }
 
 .wraper{
   width: 90%;
-  max-width: 600px;
+  max-width: 420px;
   margin: auto;
 
 }
@@ -34,7 +35,8 @@ input{
   font-weight: bold;
   border-radius: 4px;
   margin-bottom: 15px;
-  border: 1px solid #333999;
+  border: 4px solid #333999;
+  border-radius: 50px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background-color: #FFFFFF;
