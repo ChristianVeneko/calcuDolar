@@ -24,3 +24,4 @@ function calcular(){
     campoResultado.valueAsNumber = result;
     console.log(result);
 }
+
