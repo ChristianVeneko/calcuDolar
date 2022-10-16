@@ -8,6 +8,8 @@ const campoResultado = document.getElementById('monto');
 
 const url = "https://v6.exchangerate-api.com/v6/572e47397575f899191f4ce2/latest/USD"
 
+const url2= ""
+
 fetch(url)
 .then(res => res.json())
 .then(data => {
