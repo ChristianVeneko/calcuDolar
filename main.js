@@ -18,22 +18,19 @@ function cargarDatosBCV(){
 })
 }
 
-// function cargarDatosParalelo(){
-//     fetch("https://exchangemonitor.net/api/divisas?user=CHRISTIAN_121022&token=sM9OWL5mpm6e3akM0Zsv&currency=USD&filter=VES").then((resp) => {
-//         if(resp.ok){
-//             return resp.json();
-//         }
-//     }).then((json) => {
-//         precio = json.data;
-//         console.log(precio);
-//         campoPrecio.innerHTML = precio[0].data.rate;
-//         return campoPrecio;
+function cargarDatosParalelo(){
+    fetch("https://exchangemonitor.net/api/divisas?user=CHRISTIAN_121022&token=sM9OWL5mpm6e3akM0Zsv&currency=USD&filter=VES").then((resp) => {
+        if(resp.ok){
+            return resp.json();
+        }
+    }).then((json) => {
+        precio = json.data;
+        console.log(precio);
+        campoPrecio.innerHTML = precio[0].data.rate;
+        return campoPrecio;
 
-//     })
-// }
-
-
-const 
+    })
+}
 
 function calcular(){
     let price = parseFloat(campoPrecio.textContent);
