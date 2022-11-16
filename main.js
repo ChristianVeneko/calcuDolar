@@ -28,7 +28,6 @@ function cargarDatosParalelo(){
         console.log(precio);
         campoPrecio.innerHTML = precio[0].data.rate;
         return campoPrecio;
-
     })
 }
 
@@ -36,7 +35,7 @@ function calcular(){
     let price = parseFloat(campoPrecio.textContent);
     let mount = campoDolar.valueAsNumber;
     let result = price * mount;
-
+    result = result.toFixed(2)
     campoResultado.valueAsNumber = result;
     console.log(result);
 }
