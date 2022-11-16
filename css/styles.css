@@ -1,10 +1,13 @@
+html {
+  height: 100%;
+}
+
 body{
     background-color: rgb(33, 34, 46);
-    color: white;
-    margin: 0;
-    height: 150vh;
-    padding: 0 10% 5%;
-    
+    color: rgb(141, 209, 107);
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
 }
 
 .wraper{
@@ -15,35 +18,59 @@ body{
 }
 
 #calculadora{
-    margin-top: 60px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    border: 8px solid;
-    border-image: linear-gradient(60deg, yellow, blue, red ) 1;
-    border-radius: 20px;
-    text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  border-radius: 30px;
 }
 
-input{
-  display: block;
+#calculadora form a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #03e9f4;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 40px;
+  letter-spacing: 4px
+}
+
+.DolarBox input{
   width: 100%;
-  height: 35px;
-  padding: 10px;
-  max-width: 425px;
-  font-weight: bold;
-  border-radius: 4px;
-  margin-bottom: 15px;
-  border: 4px solid #333999;
-  border-radius: 50px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  background-color: #FFFFFF;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;  
+}
+
+ #calculadora .DolarBoxlabel label{
+  position: absolute;
+  top:0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: .5s;
 }
 
 .logo{
-    margin-top: 30px;
+
+    margin-top: 25px;
+    
 }
 
 #monto{
@@ -100,7 +127,7 @@ a{
   background-repeat:no-repeat;
   height:70px;
   width:70px;
-  background-color: rgb(33, 34, 46);
+  background-color: rgba(0, 0, 0, 0);
   border: 0px;
   background-size: 60px;
   background-position:center;
@@ -113,7 +140,7 @@ a{
   background-repeat:no-repeat;
   height:70px;
   width:70px;
-  background-color: rgb(33, 34, 46);
+  background-color: rgba(0, 0, 0, 0);
   border: 0px;
   background-size: 60px;
   background-position:center;

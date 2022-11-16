@@ -9,30 +9,36 @@
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-    <div id="calculadora" class="wraper">
+    <section id="calculadora" class="wraper">
         <img class="logo" src="https://play-lh.googleusercontent.com/IwK5JRfVeVHO_P8pREbECGqjbmEu9k_mR1d8eehOdIPN591pjam3sMNFUgegk-2ofGmY=w240-h480-rw" height="100px" alt="logo">
         <h1>Calculadora de Bs / $</h1>
         <h2>Valor: Bs / $</h2>
         <p id="tasa">0</p>
+        
         <div class>
             <button class="btn" role="button" id="btnCalcular" onclick='cargarDatosParalelo()' ></button>
             <button class="btn2 active" role="button" id="btnCalcular" onclick='cargarDatosBCV()' ></button>
         </div>
+        
         <div>
             <br>
             <br>
-            <input type="number" name="dolar" id="dolar" value="">
+            <div class="DolarBox">
+                <label>Dollar</label>
+                <input type="number" name="dolar" id="dolar" value="">
+                
+            </div>    
         </div>
-        
-        <br>
         <button class="button-37" role="button" id="btnCalcular" onclick='calcular()' >Calcular</button>
+        <br>
         <br>
         <div>
             <span style="font-family:'Times New Roman', Times, serif;">Bs</span>
-            <input type="number" name="monto" id="monto" value="0" disabled>
+            <div class="DolarBox">
+                <input type="number" name="monto" id="monto" value="0" disabled>
+            </div>
         </div>
-        <!-- <a href="https://github.com/ChristianVeneko">My Github</a> -->
-    </div>
+    </section>
     <script src="main.js"></script>
 </body>
 </html>
