@@ -3,6 +3,7 @@ console.log("ola")
 let precio
 let precioBsDolar
 const campoPrecio = document.getElementById('tasa');
+const lastUpdate = document.getElementById('lastUpdate')
 const campoDolar = document.getElementById('dolar');
 const campoResultado = document.getElementById('monto');
 
@@ -13,7 +14,10 @@ function cargarDatosBCV(){
     .then(data => {
     precio = data
     console.log(precio)
+    let fecha = new Date(precio.time_last_update_utc)
+    console.log(fecha)
     campoPrecio.innerHTML = precio.conversion_rates.VES
+    lastUpdate.innerHTML = fecha
     return campoPrecio
 })
 }
@@ -24,9 +28,11 @@ function cargarDatosParalelo(){
             return resp.json();
         }
     }).then((json) => {
+        
         precio = json.data;
         console.log(precio);
         campoPrecio.innerHTML = precio[0].data.rate;
+        lastUpdate.innerHTML = precio[0].format.date
         return campoPrecio;
     })
 }
