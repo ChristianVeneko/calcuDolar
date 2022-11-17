@@ -10,9 +10,8 @@
 </head>
 <body>
     <section id="calculadora" class="wraper">
-        <img class="logo" src="https://play-lh.googleusercontent.com/IwK5JRfVeVHO_P8pREbECGqjbmEu9k_mR1d8eehOdIPN591pjam3sMNFUgegk-2ofGmY=w240-h480-rw" height="80px" alt="logo">
-        <h1 style="color: rgb(213, 201, 36);">Calculadora de Bs / $</h1>
-        <h2>Valor: Bs / $</h2>
+        <h1>Calculadora de Bs / $</h1>
+        <h2>Valor del Dolar $</h2>
         <p id="tasa">0</p>
         <h2>Ultima actualizacion:</h2>
         <p id="lastUpdate">.</p>
@@ -20,13 +19,16 @@
         <div class>
             <button class="btn" role="button" id="btnCalcular" onclick='cargarDatosParalelo()' ></button>
             <button class="btn2 active" role="button" id="btnCalcular" onclick='cargarDatosBCV()' ></button>
+            <button class="btn3 active" role="button" id="btnCalcular" onclick='cambiarOperacion()' ></button>
+
+
         </div>
         
         <div>
             <br>
             <br>
             <div class="DolarBox">
-                <label>Dollar</label>
+                <label id="moneda">USD $</label>
                 <input type="number" name="dolar" id="dolar" value="">
                 
             </div>    
@@ -35,8 +37,8 @@
         <br>
         <br>
         <div>
-            <span style="font-family:'Times New Roman', Times, serif;">Bs</span>
             <div class="DolarBox">
+                <label id="monedaResultante" style="font-family:'Times New Roman', Times, serif;">Bs</label>
                 <input type="number" name="monto" id="monto" value="0" disabled>
             </div>
         </div>

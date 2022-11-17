@@ -10,6 +10,12 @@ body{
     font-family: sans-serif;
 }
 
+h1{
+  color: rgb(213, 201, 36);
+  text-decoration: underline;
+  text-align: center;
+}
+
 .wraper{
   width: 90%;
   max-width: 420px;
@@ -24,7 +30,7 @@ body{
   width: 400px;
   padding: 42px;
   transform: translate(-50%, -50%);
-  background: rgba(0,0,0,.5);
+  background: rgba(65, 64, 64, 0.721);
   box-sizing: border-box;
   box-shadow: 0 15px 25px rgba(0,0,0,.6);
   border-radius: 30px;
@@ -56,13 +62,13 @@ body{
   background: transparent;  
 }
 
- #calculadora .DolarBoxlabel label{
-  position: absolute;
+ #calculadora .DolarBox  label{
+  position: relative;
   top:0;
   left: 0;
   padding: 10px 0;
-  font-size: 16px;
-  color: #fff;
+  font-size: 20px;
+  color: rgb(78, 246, 0);
   pointer-events: none;
   transition: .5s;
 }
@@ -136,6 +142,17 @@ a{
 
 .btn2{
   background-image:url('https://monitordolarvenezuela.com/img/BCV.png');
+  background-repeat:no-repeat;
+  height:70px;
+  width:70px;
+  background-color: rgba(0, 0, 0, 0);
+  border: 0px;
+  background-size: 60px;
+  background-position:center;
+}
+
+.btn3{
+  background-image:url('/Images/change.png');
   background-repeat:no-repeat;
   height:70px;
   width:70px;
