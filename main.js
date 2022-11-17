@@ -10,16 +10,23 @@ const labelMoneda = document.getElementById('moneda')
 const labelMonedaResultante = document.getElementById('monedaResultante')
 
 let usdToBs = true
+let calculado = false
 
 function cambiarOperacion(){
     if(usdToBs){
         usdToBs = false
         labelMoneda.innerText = "Bs."
         labelMonedaResultante.innerText = "USD $"
+        if(calculado){
+            calcular()
+        }
     }else{
         usdToBs = true
         labelMoneda.innerText = "USD $"
         labelMonedaResultante.innerText = "Bs."
+        if(calculado){
+            calcular()
+        }
     }
     
 }
@@ -65,6 +72,7 @@ function calcular(){
         resultUSD = resultUSD.toFixed(2);
         campoResultado.valueAsNumber = resultUSD;
     }
+    calculado = true
 }
 
 
