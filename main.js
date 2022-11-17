@@ -1,5 +1,4 @@
-console.log("ola")
-
+console.log("Oli")
 let precio
 let precioBsDolar
 const campoPrecio = document.getElementById('tasa');
