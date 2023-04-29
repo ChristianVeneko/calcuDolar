@@ -46,15 +46,15 @@ function cargarDatosBCV(){
 }
 
 function cargarDatosParalelo(){
-    fetch("https://exchangemonitor.net/api/divisas?user=CHRISTIAN_121022&token=sM9OWL5mpm6e3akM0Zsv&currency=USD&filter=VES").then((resp) => {
+    fetch('https://s3.amazonaws.com/dolartoday/data.json').then((resp) => {
         if(resp.ok){
             return resp.json();
         }
     }).then((json) => {
-        precio = json.data;
+        precio = json
         console.log(precio);
-        campoPrecio.innerHTML = precio[0].data.rate;
-        lastUpdate.innerHTML = precio[0].format.date;
+        campoPrecio.innerHTML = precio.USD.transferencia;
+        lastUpdate.innerHTML = precio._timestamp.fecha;
         return campoPrecio;
     })
 }
@@ -75,4 +75,4 @@ function calcular(){
 }
 
 
-window.onload = cargarDatosBCV()
+window.onload = cargarDatosParalelo();
